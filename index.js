@@ -28,7 +28,7 @@ app.post("/api/chat", async (req, res) => {
         "Authorization": `Bearer ${OPENAI_KEY}`,
       },
       body: JSON.stringify({
-        model: "gpt-5", // используем GPT-4o
+        model: "gpt-4o", // используем GPT-4o
         messages: [
           { role: "system", content: "You are a helpful assistant." },
           { role: "user", content: message }
@@ -53,4 +53,5 @@ app.post("/api/chat", async (req, res) => {
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`✅ Server running at http://localhost:${PORT}`));
+
 
